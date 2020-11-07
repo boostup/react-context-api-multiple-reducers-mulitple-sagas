@@ -1,5 +1,4 @@
 import React from "react";
-import DisplayStateComponent from "./DisplayStateComponent";
 import { useDataLayerValue } from "../context/DataLayer";
 import PrettyPrint from "./PrettyPrint";
 
