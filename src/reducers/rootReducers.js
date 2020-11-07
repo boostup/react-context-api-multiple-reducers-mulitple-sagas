@@ -6,6 +6,7 @@ import {
   counter2initialState,
   counter2Reducers,
 } from "./counter2/counter2.reducers";
+import { uiInitialState, uiReducers } from "./ui/ui.reducers";
 
 function combineReducers(slices) {
   return function (prevState, action) {
@@ -21,11 +22,13 @@ function combineReducers(slices) {
 export const allInitialStates = {
   counter1: counter1initialState,
   counter2: counter2initialState,
+  ui: uiInitialState,
 };
 
 const allReducers = combineReducers({
   counter1: counter1Reducers,
   counter2: counter2Reducers,
+  ui: uiReducers,
 });
 
 export default allReducers;
