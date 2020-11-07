@@ -49,3 +49,33 @@ App > div > div {
 .App > div > div::before {
   content: "Depth: 2";
 }
+
+.loader {
+  position: relative;
+}
+
+.loader__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.loader__messageBox {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  font-size: 5rem;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__image {
+  padding: 1rem;
+  background-color: white;
+}

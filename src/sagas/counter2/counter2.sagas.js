@@ -7,7 +7,7 @@ function* incrementAsync() {
     "I AM STARTING TO INCREMENT FROM",
     previousState.counter2
   );
-  yield delay(1000);
+  yield delay(2000);
   yield put({ type: "INCREMENT_COUNTER_2" });
   const state = yield select();
   yield call(console.log, "I AM FINISHED INCREMENTING TO", state.counter2);
@@ -16,7 +16,6 @@ function* incrementAsync() {
 function* listenToCounter1IncrementsAsync() {
   yield delay(1000);
   yield put({ type: "INCREMENT_COUNTER_2" });
-  yield put({ type: "INCREMENT_COUNTER_UPON_LISTENNING" });
 }
 
 //increment saga
