@@ -1,20 +1,20 @@
 import React from "react";
 import { useDataLayerValue } from "../context/DataLayer";
 import PrettyPrint from "./PrettyPrint";
-import SomeNestedComponent from "./SomeNestedComponent";
 
-const DisplayStateComponent = () => {
+function HeaderComponent() {
   const { state } = useDataLayerValue();
+
   return (
     <div>
       <p>
-        I have access to everything: I'm the king of the world! Look at all that
-        state :
+        Hey! what's up!? I'm the Header of this website. Look at my pretty
+        state:
       </p>
+
       <PrettyPrint toPrint={state} />
-      <SomeNestedComponent />
     </div>
   );
-};
+}
 
-export default DisplayStateComponent;
+export default HeaderComponent;
