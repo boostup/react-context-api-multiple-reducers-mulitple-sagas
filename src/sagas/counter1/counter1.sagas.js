@@ -7,7 +7,7 @@ function* incrementAsync() {
     "I AM STARTING TO INCREMENT FROM",
     previousState.counter1
   );
-  yield delay(2000);
+  yield delay(1000);
   yield put({ type: "INCREMENT_COUNTER_1" });
   const state = yield select();
   yield call(console.log, "I AM FINISHED INCREMENTING TO", state.counter1);

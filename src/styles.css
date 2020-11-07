@@ -1,4 +1,49 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 1rem;
+}
+
+.App,
+.App > div,
+App > div > div {
+  position: relative;
   font-family: sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App > div,
+.App > div > div {
+  position: relative;
+  border: 5px solid hotpink;
+  width: 95vw;
+  padding: 1rem;
+}
+
+.App > div > div {
+  width: 80%;
+  border: 5px solid teal;
+}
+
+.App > div::before,
+.App > div > div::before {
+  content: "Depth: Level 1";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border: 5px dotted rebeccapurple;
+}
+
+.App > div > div::before {
+  content: "Depth: Level 2";
+}
+
+.App__groundFloor {
 }
