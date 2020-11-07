@@ -1,20 +1,20 @@
-# The Flux architectural pattern using `useReducer` and `the Context` API
+# The Flux architectural pattern using `useReducer`, the `Context` API, and Sagas
 
-Just in case, here a nice diagram about the generic Flux pattern.
+Just in case, here is a nice diagram about the generic Flux pattern in React.
 
 <img src="public/images/flux-pattern.png" alt="Flux architectural pattern">
 
-## So, what does this repo even exist?
+## So, why does this repo even exist?
 
 It demonstrates the combination of :
 
-- `Context` API and hook
+- `Context` API and `useContext` hook
 - `useReducer` hook
-- Sagas
+- [`useReactSaga` custom hook](https://www.npmjs.com/package/use-react-saga)
 
 ---
 
-[Demo Link]()
+[Demo Link](https://confident-turing-f05f43.netlify.app/) | [GitHub Repo](https://github.com/boostup/react-context-api-multiple-reducers-mulitple-sagas)
 
 ---
 
@@ -24,7 +24,7 @@ Because I can ;)
 
 No, but seriously, because I needed to make sense of Redux, of the Context API, and more generally, the Flux Pattern, and of async actions.
 
-Also, to me, it is important to eval every package I include in my apps, and `useContext` and `useReducer` being shipped defacto with React is a plus.
+Also, to me, it is important to understand as many React functions or third-party packages as I include in my apps, and `useContext` and `useReducer` being shipped defacto with React is a plus, versus having to include a whole bunch of packages that revolve around the Redux ecosystem.
 
 So this demo allows to demonstrate that the `redux` and `react-redux` packages are no longer required dependencies to implement the Flux Pattern in React, in a way that makes both sense and is scalable with combined reducers to handle endless future slices of state.
 
@@ -35,9 +35,21 @@ And this, I do not know myself, as this is very experimental. I wouldn't recomme
 
 ## Notes
 
-This demos depends on a tiny package called `use-react-saga`.
+This demo depends on a tiny package called `use-react-saga`.
 
-All it is, is a custom hook for react which depends on the `redux-saga` package, which is something I wanted to experiment with, for async actions.
+All it is, is a custom hook for React which depends on the `redux-saga` package, which is something I wanted to experiment with as the next natural evolution step after `redux-thunk`, for async actions.
+
+## Addendum
+
+After the perusal of the installed packages in the `node_modules` directory, I have come to realize that there is a `redux` directory in there!! After perusing the `yarn.lock` file, `redux-saga` packages has it as a dependency.
+
+So this demo does NOT unfortunately demonstrate that adding Redux as a dependency can be avoided. Fortunately, it is only [2kB, including dependencies](https://www.npmjs.com/package/redux)!
+
+So this demo only goes to shows how **unavoidable** `redux` is when it comes to making stable apps ;)
+
+In the particular case of this demo, if I wish to remove it as a dependency, I must implement Sagas myself. Is it worth it ? I'll leave it up to you to decide.
+
+Finally, I should mention that I do not hold a grudge against Redux, I just wanted to evaluate the Context API as a potential replacement, since we see so many articles on this topic, but they all show very small unscalable demos or POCs which were never convincing to me.
 
 ---
 
