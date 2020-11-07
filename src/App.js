@@ -31,22 +31,33 @@ export default function App() {
 
       <HeaderComponent />
 
+      <br />
+
       <p>
         We, buttons below, live on the ground floor, level 0, in the App.js file
         directly but, we're cool!
       </p>
 
-      <p className="App__groundFloor">
+      <p>
         <ButtonComponent
           instructions="Press me to increment counter 1"
           onClick={handleClick1}
         />
-        <hr />
+      </p>
+
+      <hr />
+
+      <p>
+        <span role="img" aria-label="pulling my tongue">
+          👀 👍
+        </span>
         <ButtonComponent
-          instructions="No no, press me to increment counter 2, he's much better ;)"
+          instructions="Whenever I see that counter 1 increments, I increment counter 2!  This way, I'm always ahead of competition. But you can still press me though"
           onClick={handleClick2}
         />
       </p>
+
+      <br />
 
       <FooterComponent />
     </div>
