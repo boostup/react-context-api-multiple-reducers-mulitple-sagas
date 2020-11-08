@@ -38,7 +38,7 @@ App > div > div {
 
 .App > div::before,
 .App > div > div::before {
-  content: "Depth: 1";
+  content: "Nesting Level: 1";
   position: absolute;
   top: 0;
   left: 0;
@@ -47,15 +47,21 @@ App > div > div {
 }
 
 .App > div > div::before {
-  content: "Depth: 2";
+  content: "Nesting Level: 2";
 }
 
 .loader {
   position: relative;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader.In {
+  opacity: 1;
 }
 
 .loader__overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -78,4 +84,37 @@ App > div > div {
 .loader__image {
   padding: 1rem;
   background-color: white;
+  transform: scaleY(0);
+  transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.In .loader__image {
+  transform: scaleY(1);
+}
+
+.prettyPrint {
+  border: 1px solid teal;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.prettyPrint pre {
+  margin: 0;
+  background-color: teal;
+  padding: 1rem;
+  font-weight: 800;
+  cursor: help;
+}
+
+.prettyPrint pre.In {
+  animation: animate 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes animate {
+  from {
+    transform: rotate3d(0);
+  }
+  to {
+    transform: perspective(600px) rotateX(360deg) scale(1.3);
+  }
 }
