@@ -39,7 +39,7 @@ export default function App() {
 
         <p>
           <ButtonComponent
-            instructions="Press me to increment counter 1"
+            instructions={`Press me to increment counter 1 => ${state.counter1}`}
             onClick={handleClick1}
           />
         </p>
@@ -47,13 +47,19 @@ export default function App() {
         <hr />
 
         <p>
-          <span role="img" aria-label="pulling my tongue">
-            👀 👍
-          </span>
           <ButtonComponent
-            instructions="PRESS ME!!  BTW: whenever I see that counter 1 increments, I increment counter 2!  This way, I'm always ahead of competition."
+            instructions={`PRESS ME for counter 2 => ${state.counter2}`}
             onClick={handleClick2}
           />
+        </p>
+        <span role="img" aria-label="pulling my tongue">
+          👀 👍
+        </span>
+        <p>
+          <strong>
+            BTW: whenever I see that counter 1 increments, I increment counter
+            2! This way, I'm always ahead of competition.
+          </strong>
         </p>
 
         <br />

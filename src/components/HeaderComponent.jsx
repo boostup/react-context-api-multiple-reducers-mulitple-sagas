@@ -12,7 +12,9 @@ function HeaderComponent() {
         state:
       </p>
 
-      <PrettyPrint toPrint={state} />
+      <div>
+        <PrettyPrint toPrint={state} />
+      </div>
     </div>
   );
 }
