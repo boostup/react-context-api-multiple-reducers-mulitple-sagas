@@ -9,6 +9,17 @@ export function combineReducers(slices) {
   };
 }
 
+export function combineThunks(prevState, slices) {
+  return slices.reduce((nextState, nextProp) => {
+    const keys = Object.keys(nextProp);
+    const values = Object.values(nextProp);
+    for (let i = 0; i < keys.length; i++) {
+      nextState[keys[i]] = values[i];
+    }
+    return nextState;
+  }, prevState);
+}
+
 export function applyMiddelware(slices, middlewares) {
   //for each slice
   return Object.keys(slices).reduce((nextSlice, sliceName) => {

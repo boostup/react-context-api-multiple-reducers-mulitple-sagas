@@ -1,4 +1,4 @@
-//Logger : A middleware
+//Logger :  A Naive middleware
 export function logger(fn) {
   return function (...rest) {
     console.group(fn.name);

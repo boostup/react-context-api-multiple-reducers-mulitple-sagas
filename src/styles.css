@@ -104,6 +104,7 @@ App > div > div {
   padding: 1rem;
   font-weight: 800;
   cursor: help;
+  text-align: left;
 }
 
 .prettyPrint pre.In {

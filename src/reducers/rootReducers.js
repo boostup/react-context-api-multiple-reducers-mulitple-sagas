@@ -14,10 +14,16 @@ import {
 
 import { uiInitialState, uiReducers } from "./ui/ui.reducers";
 
-export const allInitialStates = {
+import {
+  chuckNorrisInitialState,
+  chuckNorrisReducers,
+} from "./chuckNorris/chuckNorris.reducers";
+
+export const combinedInitialStates = {
   counter1: counter1initialState,
   counter2: counter2initialState,
   ui: uiInitialState,
+  chuckNorris: chuckNorrisInitialState,
 };
 
 export default combineReducers(
@@ -27,6 +33,7 @@ export default combineReducers(
       counter1: counter1Reducers,
       counter2: counter2Reducers,
       ui: uiReducers,
+      chuckNorris: chuckNorrisReducers,
     },
     [
       //Add middlewares here
