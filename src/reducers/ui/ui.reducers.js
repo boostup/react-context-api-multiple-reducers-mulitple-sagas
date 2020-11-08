@@ -3,7 +3,6 @@ export const uiInitialState = {
 };
 
 export function uiReducers(state, action) {
-  console.log(state, action);
   switch (action.type) {
     case "IS_WORKING":
       return {
