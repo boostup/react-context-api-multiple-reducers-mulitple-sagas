@@ -8,7 +8,7 @@ const ButtonComponent = ({ instructions, onClick }) => {
     dispatch({ type: "IS_WORKING", payload: true });
     onClick();
 
-    let timer = setTimeout(() => {
+    setTimeout(() => {
       dispatch({ type: "IS_WORKING", payload: false });
     }, 1000);
   }
