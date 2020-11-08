@@ -31,7 +31,7 @@ export default combineReducers(
     [
       //Add middlewares here
       logger,
-      // demo,
+      demo,
     ]
   )
 );
