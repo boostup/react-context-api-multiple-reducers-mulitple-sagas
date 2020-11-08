@@ -112,9 +112,9 @@ App > div > div {
 
 @keyframes animate {
   from {
-    transform: rotate3d(0);
+    transform: perspective(600px) rotate3d(0, 0, 0, 0) scale(1);
   }
   to {
-    transform: perspective(600px) rotateX(360deg) scale(1.3);
+    transform: perspective(600px) rotate3d(1, 0, 0, 360deg) scale(1.3);
   }
 }
