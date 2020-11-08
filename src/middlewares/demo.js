@@ -1,4 +1,4 @@
-//A demo middleware
+// A Naive demo middleware
 export function demo(fn) {
   return function (...rest) {
     console.log("Demo middleware", rest);

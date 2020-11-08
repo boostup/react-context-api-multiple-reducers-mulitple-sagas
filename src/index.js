@@ -5,12 +5,14 @@ import { DataLayer } from "./context/DataLayer";
 
 import App from "./App";
 
-import allReducers, { allInitialStates } from "./reducers/rootReducers";
+import combinedReducers, {
+  combinedInitialStates,
+} from "./reducers/rootReducers";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <DataLayer initialState={allInitialStates} reducer={allReducers}>
+    <DataLayer initialState={combinedInitialStates} reducer={combinedReducers}>
       <App />
     </DataLayer>
     ,
