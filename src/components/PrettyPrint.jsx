@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+import DataTable from "./DataTable";
+
 const PrettyPrint = ({ toPrint }) => {
-  const [In, setIn] = useState("---");
+  const [In, setIn] = useState("Out");
 
   useEffect(() => {
     let timer = null;
@@ -14,13 +17,13 @@ const PrettyPrint = ({ toPrint }) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [toPrint.counter1, toPrint.counter2]);
+  }, [toPrint.counter1, toPrint.counter2, toPrint.chuckNorris]);
 
   return (
     <div className="prettyPrint">
-      <pre title="I animate when counters increment!" className={In}>
-        {JSON.stringify(toPrint, null, 2)}
-      </pre>
+      <main title="I animate when state changes!" className={In}>
+        {DataTable(toPrint, Object.keys(toPrint))}
+      </main>
     </div>
   );
 };
