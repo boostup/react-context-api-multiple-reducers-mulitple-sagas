@@ -21,7 +21,8 @@ App > div > div {
 .App > div,
 .App > div > div {
   position: relative;
-  border: 5px solid hotpink;
+  border: 1px solid hotpink;
+  background-color: rgb(255 101 69 / 9%);
   width: 95vw;
   padding: 1rem;
 }
@@ -33,7 +34,6 @@ App > div > div {
 
 .App > div > div {
   width: 80%;
-  border: 5px solid teal;
 }
 
 .App > div::before,
@@ -43,7 +43,7 @@ App > div > div {
   top: 0;
   left: 0;
   padding: 1rem;
-  border: 5px dotted rebeccapurple;
+  border: 1px dotted rebeccapurple;
 }
 
 .App > div > div::before {
@@ -93,13 +93,13 @@ App > div > div {
 }
 
 .prettyPrint {
-  border: 1px solid teal;
+  border: 1px solid hotpink;
   margin: 0 auto;
 }
 
 .prettyPrint main {
   margin: 0;
-  background-color: rgb(245 207 174 / 80%);
+  background-color: rgb(16 31 201 / 21%);
   padding: 1rem;
   cursor: help;
   text-align: left;
@@ -117,7 +117,7 @@ App > div > div {
 }
 
 .prettyPrint table th {
-  background-color: rgb(245 207 174 / 80%);
+  background-color: rgb(16 31 201 / 21%);
   font-weight: 800;
   vertical-align: top;
 }
