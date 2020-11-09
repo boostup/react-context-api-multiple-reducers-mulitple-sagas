@@ -48,6 +48,9 @@ export default function App() {
 
         <p>
           <ButtonComponent
+            style={{ cursor: "help" }}
+            title="BTW: whenever I see that counter 1 increments, I increment counter
+            2! This way, I'm always ahead of competition."
             instructions={`PRESS ME for counter 2 => ${state.counter2}`}
             onClick={handleClick2}
           />
@@ -55,12 +58,6 @@ export default function App() {
         <span role="img" aria-label="pulling my tongue">
           👀 👍
         </span>
-        <p>
-          <strong>
-            BTW: whenever I see that counter 1 increments, I increment counter
-            2! This way, I'm always ahead of competition.
-          </strong>
-        </p>
 
         <br />
 

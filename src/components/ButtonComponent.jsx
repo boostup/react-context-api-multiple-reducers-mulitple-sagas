@@ -1,7 +1,7 @@
 import React from "react";
 import { useDataLayerValue } from "../context/DataLayer";
 
-const ButtonComponent = ({ instructions, onClick }) => {
+const ButtonComponent = ({ instructions, onClick, title, style = {} }) => {
   const { dispatch } = useDataLayerValue();
 
   function handleClick() {
@@ -13,6 +13,10 @@ const ButtonComponent = ({ instructions, onClick }) => {
     }, 1000);
   }
 
-  return <button onClick={handleClick}>{instructions}</button>;
+  return (
+    <button style={style} title={title} onClick={handleClick}>
+      {instructions}
+    </button>
+  );
 };
 export default ButtonComponent;
