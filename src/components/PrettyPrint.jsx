@@ -6,7 +6,7 @@ const PrettyPrint = ({ toPrint }) => {
   const [In, setIn] = useState("In");
 
   useEffect(() => {
-    setIn(In === "In" ? "Out" : "In");
+    setIn((In) => (In === "In" ? "Out" : "In"));
   }, [toPrint.ui.isWorking]);
 
   return (
