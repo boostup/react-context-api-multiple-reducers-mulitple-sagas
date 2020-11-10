@@ -14,7 +14,7 @@ It demonstrates the combination of :
 
 ---
 
-[Demo Link](https://confident-turing-f05f43.netlify.app/) | [GitHub Repo](https://github.com/boostup/react-context-api-multiple-reducers-mulitple-sagas)
+[Demo Link](https://confident-turing-f05f43.netlify.app/) | [GitHub Repo](https://github.com/boostup/react-context-api-multiple-reducers-mulitple-sagas) | Blog Post on [Dev.to](https://dev.to/boostup/the-flux-architectural-pattern-using-usereducer-the-context-api-and-sagas-8ie)
 
 ---
 
